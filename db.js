@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const ObjectId = mongoose.Types.ObjectId;
 
-mongoose.connect("mongodb+srv://admin:admin123@cluster0.vhnnv.mongodb.net/courseSelling");
+mongoose.connect(process.env.MONGO_URL);
 
 const userSchema = new Schema({
     email : {type:String , unique : true},
